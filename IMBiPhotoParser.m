@@ -781,7 +781,7 @@
 			imagePath = [NSString stringWithFormat:@"%@%@%@", pathPrefix, replacement, suffixString];
 			NSLog(@"Trying %@...", imagePath);
 		}
-		[aScanner release];
+        [aScanner release];
 	}
 	return imagePath;
 }

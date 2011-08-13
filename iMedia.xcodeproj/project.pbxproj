@@ -357,6 +357,7 @@
 		D0F2DBCF1098270F004280C1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F2DBCE1098270F004280C1 /* libsqlite3.dylib */; };
 		D0FC9518108213A800973FEE /* IMBiTunesVideoParser.h in Headers */ = {isa = PBXBuildFile; fileRef = D0FC9516108213A800973FEE /* IMBiTunesVideoParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0FC9519108213A800973FEE /* IMBiTunesVideoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D0FC9517108213A800973FEE /* IMBiTunesVideoParser.m */; };
+		E241114413F676DE00E7C512 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E241114313F676DE00E7C512 /* libcrypto.dylib */; };
 		FC30D0261309777300463E52 /* IMBFlickrParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FC30D0251309777300463E52 /* IMBFlickrParser.m */; };
 		FCD9ABB410C677FF0092F441 /* IMBLoadMoreObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FCD9ABB210C677FF0092F441 /* IMBLoadMoreObject.h */; };
 		FCD9ABB510C677FF0092F441 /* IMBLoadMoreObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD9ABB310C677FF0092F441 /* IMBLoadMoreObject.m */; };
@@ -465,7 +466,7 @@
 		CE09F302124823020094EC48 /* IMBURLGetSizeOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMBURLGetSizeOperation.m; sourceTree = "<group>"; };
 		CE0E0C80104C72A200EE6B09 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		CE1AED32129C475200694472 /* js.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = js.tiff; sourceTree = "<group>"; };
-		CE1DE6481386E2E600C3F780 /* pt_BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt_BR; path = pt_BR.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
+		CE1DE6481386E2E600C3F780 /* pt_BR */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = pt_BR; path = pt_BR.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		CE28E51A124192A800B00F3D /* IMBDisableTitleToColorTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMBDisableTitleToColorTransformer.h; sourceTree = "<group>"; };
 		CE28E51B124192A800B00F3D /* IMBDisableTitleToColorTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMBDisableTitleToColorTransformer.m; sourceTree = "<group>"; };
 		CE394AC11371A1F700EF0D1E /* cork-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cork-background.jpg"; sourceTree = "<group>"; };
@@ -774,6 +775,8 @@
 		D0FC9516108213A800973FEE /* IMBiTunesVideoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMBiTunesVideoParser.h; sourceTree = "<group>"; };
 		D0FC9517108213A800973FEE /* IMBiTunesVideoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMBiTunesVideoParser.m; sourceTree = "<group>"; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		E241114113F676BD00E7C512 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = usr/lib/libssl.dylib; sourceTree = SDKROOT; };
+		E241114313F676DE00E7C512 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
 		F331802411E6D25D00BDABC2 /* IMBPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMBPanel.h; sourceTree = "<group>"; };
 		F331802511E6D25D00BDABC2 /* IMBPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMBPanel.m; sourceTree = "<group>"; };
 		FC30D0251309777300463E52 /* IMBFlickrParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMBFlickrParser.m; sourceTree = "<group>"; };
@@ -781,7 +784,7 @@
 		FCAA9638134227D700EA1A3A /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FCD9ABB210C677FF0092F441 /* IMBLoadMoreObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMBLoadMoreObject.h; sourceTree = "<group>"; };
 		FCD9ABB310C677FF0092F441 /* IMBLoadMoreObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMBLoadMoreObject.m; sourceTree = "<group>"; };
-		FCEFB408135332360043CBEB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FCEFB408135332360043CBEB /* es */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FCEFB40C135332530043CBEB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -790,6 +793,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E241114413F676DE00E7C512 /* libcrypto.dylib in Frameworks */,
 				30394ABC12DC64D700ACA531 /* ObjectiveFlickr.framework in Frameworks */,
 				D0DA9AE1102EB7BD008EC9F9 /* Carbon.framework in Frameworks */,
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
@@ -828,6 +832,8 @@
 		0867D691FE84028FC02AAC07 /* iMedia */ = {
 			isa = PBXGroup;
 			children = (
+				E241114313F676DE00E7C512 /* libcrypto.dylib */,
+				E241114113F676BD00E7C512 /* libssl.dylib */,
 				D0760AC210C5027100F2119C /* IMBProject.xcconfig */,
 				D0CF005310C50908009EC68F /* IMBTargetDebug.xcconfig */,
 				D0CF005410C50908009EC68F /* IMBTargetRelease.xcconfig */,
@@ -1949,7 +1955,11 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = iMedia;
+<<<<<<< HEAD
 				VALID_ARCHS = "ppc i386 x86_64";
+=======
+				SKIP_INSTALL = YES;
+>>>>>>> Buildable on Lion with Xcode4.2
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -1965,7 +1975,11 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = iMedia;
+<<<<<<< HEAD
 				VALID_ARCHS = "ppc i386 x86_64";
+=======
+				SKIP_INSTALL = YES;
+>>>>>>> Buildable on Lion with Xcode4.2
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -1974,6 +1988,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0760AC210C5027100F2119C /* IMBProject.xcconfig */;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -1982,6 +1997,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0760AC210C5027100F2119C /* IMBProject.xcconfig */;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -2018,6 +2034,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0760AC210C5027100F2119C /* IMBProject.xcconfig */;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
 			name = Test;
@@ -2033,7 +2050,11 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = iMedia;
+<<<<<<< HEAD
 				VALID_ARCHS = "ppc i386 x86_64";
+=======
+				SKIP_INSTALL = YES;
+>>>>>>> Buildable on Lion with Xcode4.2
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Test;

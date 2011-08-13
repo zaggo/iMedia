@@ -166,7 +166,7 @@ static NSString* kIMBSelectNodeWithIdentifierNotification = @"IMBSelectNodeWithI
 
 	[IMBConfig registerDefaultPrefs:classDict forClass:self.class];
 	
-	[pool release];
+	[pool drain];
 }
 
 
@@ -1064,27 +1064,21 @@ static NSString* kIMBSelectNodeWithIdentifierNotification = @"IMBSelectNodeWithI
 	[panel setResolvesAliases:YES];
 
 	NSWindow* window = [ibSplitView window];
-	[panel beginSheetForDirectory:nil file:nil types:nil modalForWindow:window modalDelegate:self didEndSelector:@selector(openPanelDidEnd:returnCode:contextInfo:) contextInfo:NULL];
+    [panel beginSheetModalForWindow:window completionHandler:^(NSInteger result) {
+        // Add a root node for this each folder and the reload the library...
+        if (result == NSFileHandlingPanelOKButton)
+        {
+            NSArray* urls = [panel URLs];
+            for (NSURL* url in urls)
+            {
+                IMBParser* parser = [self.libraryController addCustomRootNodeForFolder:[url path]];
+                self.selectedNodeIdentifier = [parser identifierForPath:[url path]];
+            }	
+            
+            [self.libraryController reload];
+        }
+    }];
 }
-
-
-// Add a root node for this each folder and the reload the library...
-	
-- (void) openPanelDidEnd:(NSOpenPanel*)inPanel returnCode:(int)inReturnCode contextInfo:(void*)inContextInfo
-{
-	if (inReturnCode == NSOKButton)
-	{
-		NSArray* paths = [inPanel filenames];
-		for (NSString* path in paths)
-		{
-			IMBParser* parser = [self.libraryController addCustomRootNodeForFolder:path];
-			self.selectedNodeIdentifier = [parser identifierForPath:path];
-		}	
-		
-		[self.libraryController reload];
-	}
-}
-
 
 //----------------------------------------------------------------------------------------------------------------------
 

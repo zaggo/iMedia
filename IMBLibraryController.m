@@ -117,7 +117,7 @@ static NSMutableDictionary* sLibraryControllers = nil;
 @property (retain) IMBParser* parser;
 @property (assign) IMBOptions options;
 @property (retain) IMBNode* oldNode;	
-@property (copy) IMBNode* newNode;		// Copied so that background operation can modify the node
+@property (copy) IMBNode* freshNode;		// Copied so that background operation can modify the node
 @property (copy) NSString* parentNodeIdentifier;		
 
 @end
@@ -168,7 +168,7 @@ static NSMutableDictionary* sLibraryControllers = nil;
 @synthesize parser = _parser;
 @synthesize options = _options;
 @synthesize oldNode = _oldNode;
-@synthesize newNode = _newNode;
+@synthesize freshNode = _newNode;
 @synthesize parentNodeIdentifier = _parentNodeIdentifier;
 
 
@@ -192,7 +192,7 @@ static NSMutableDictionary* sLibraryControllers = nil;
     {
         [self.libraryController 
 			_replaceNode:self.oldNode 
-			withNode:self.newNode 
+			withNode:self.freshNode 
 			parentNodeIdentifier:self.parentNodeIdentifier];
     }
     else
@@ -239,7 +239,7 @@ static NSMutableDictionary* sLibraryControllers = nil;
     IMBParser *parser = [self parser];
 	[parser willUseParser];
 	IMBNode* newNode = [parser nodeWithOldNode:self.oldNode options:self.options error:&error];
-    self.newNode = newNode;
+    self.freshNode = newNode;
 	
 	if (error == nil)
 	{
@@ -276,11 +276,11 @@ static NSMutableDictionary* sLibraryControllers = nil;
 		// This was using _paser ivar directly before with indication given as to it being necessary, so I'm switching to the proper accessor to see if it fixes my crash - Mike Abdullah
         IMBParser *parser = [self parser];
         [parser willUseParser];
-		[parser populateNode:self.newNode options:self.options error:&error];
+		[parser populateNode:self.freshNode options:self.options error:&error];
 		
 		if (error == nil)
 		{
-			[self performSelectorOnMainThread:@selector(_didPopulateNode:) withObject:self.newNode];
+			[self performSelectorOnMainThread:@selector(_didPopulateNode:) withObject:self.freshNode];
 			[self doReplacement];
 		}
 		else
@@ -672,7 +672,7 @@ static NSMutableDictionary* sLibraryControllers = nil;
         
         if (inOldNode)
         {
-            if (watchedPath = inOldNode.watchedPath)
+            if ((watchedPath = inOldNode.watchedPath))
             {
                 if (inOldNode.watcherType == kIMBWatcherTypeKQueue)
                     [self.watcherUKKQueue removePath:watchedPath];
@@ -691,7 +691,7 @@ static NSMutableDictionary* sLibraryControllers = nil;
             if (index == NSNotFound) index = nodes.count;
             [nodes insertObject:inNewNode atIndex:index];
             
-            if (watchedPath = inNewNode.watchedPath)
+            if ((watchedPath = inNewNode.watchedPath))
             {
                 if (inNewNode.watcherType == kIMBWatcherTypeKQueue)
                     [self.watcherUKKQueue addPath:watchedPath];
@@ -836,7 +836,7 @@ static NSMutableDictionary* sLibraryControllers = nil;
 		operation.parser = inNode.parser;
 		operation.options = self.options;
 		operation.oldNode = inNode;
-		operation.newNode = inNode;		// This will automatically create a copy!
+		operation.freshNode = inNode;		// This will automatically create a copy!
 		operation.parentNodeIdentifier = inNode.parentNode.identifier;
 		
 		[[IMBOperationQueue sharedQueue] addOperation:operation];
@@ -936,7 +936,7 @@ static NSMutableDictionary* sLibraryControllers = nil;
 		
 		NSUInteger n = [rootPaths count];
 		
-		for (NSUInteger i=n-1; i>=0; i--)
+		for (NSInteger i=n-1; i>=0; i--)
 		{
 			NSString* rootPath = [rootPaths objectAtIndex:i];
 			

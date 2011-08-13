@@ -609,9 +609,12 @@
 				CFURLRef resolvedUrl = CFURLCreateFromFSRef(kCFAllocatorDefault, &fsRef);
 				if (resolvedUrl != NULL)
 				{
-					resolvedPath =
-                    [(id)CFURLCopyFileSystemPath(resolvedUrl, kCFURLPOSIXPathStyle)
-                     autorelease];
+                    CFStringRef path = CFURLCopyFileSystemPath(resolvedUrl, kCFURLPOSIXPathStyle);
+                    if(path)
+                    {
+                        resolvedPath = [[(NSString*)path copy] autorelease];
+                        CFRelease(path);
+                    }
 					CFRelease(resolvedUrl);
 				}
 			}

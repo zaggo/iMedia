@@ -340,7 +340,11 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ObjectiveFlickr;
+<<<<<<< HEAD
 				VALID_ARCHS = "ppc i386 x86_64";
+=======
+				SKIP_INSTALL = YES;
+>>>>>>> Buildable on Lion with Xcode4.2
 			};
 			name = Debug;
 		};
@@ -374,7 +378,11 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ObjectiveFlickr;
+<<<<<<< HEAD
 				VALID_ARCHS = "ppc i386 x86_64";
+=======
+				SKIP_INSTALL = YES;
+>>>>>>> Buildable on Lion with Xcode4.2
 			};
 			name = Release;
 		};
@@ -424,6 +432,7 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
 			};
@@ -454,6 +463,10 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+<<<<<<< HEAD
+=======
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+>>>>>>> Buildable on Lion with Xcode4.2
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -510,6 +523,10 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+<<<<<<< HEAD
+=======
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+>>>>>>> Buildable on Lion with Xcode4.2
 				SDKROOT = macosx;
 			};
 			name = Test;
@@ -555,7 +572,11 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ObjectiveFlickr;
+<<<<<<< HEAD
 				VALID_ARCHS = "ppc i386 x86_64";
+=======
+				SKIP_INSTALL = YES;
+>>>>>>> Buildable on Lion with Xcode4.2
 			};
 			name = Test;
 		};

@@ -1148,12 +1148,10 @@ static NSArray* sSupportedUTIs = nil;
 		
 		if (source != NULL) {
 			imageRepresentation = CGImageSourceCreateImageAtIndex(source, 0, NULL);
-			
+            [NSMakeCollectable(imageRepresentation) autorelease];			
 			CFRelease(source);
 		}
-		
-		[NSMakeCollectable(imageRepresentation) autorelease];
-		
+				
 		if (imageRepresentation) {
 			IMBLightroomObject *lightroomObject = (IMBLightroomObject*)inObject;
 			NSString *orientation = [[lightroomObject preliminaryMetadata] objectForKey:@"orientation"];
@@ -1183,6 +1181,7 @@ static NSArray* sSupportedUTIs = nil;
 				imageRepresentation = [self imageRotated:imageRepresentation forOrientation:orientationProperty];
 			}
 		}
+
 	}
 
 	// Return the result to the main thread...
