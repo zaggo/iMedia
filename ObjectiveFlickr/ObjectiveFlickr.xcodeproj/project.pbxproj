@@ -313,11 +313,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					ppc,
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -330,7 +326,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				INFOPLIST_FILE = "ObjectiveFlickr-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -340,11 +335,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ObjectiveFlickr;
-<<<<<<< HEAD
-				VALID_ARCHS = "ppc i386 x86_64";
-=======
-				SKIP_INSTALL = YES;
->>>>>>> Buildable on Lion with Xcode4.2
+				SKIP_INSTALL = NO;
 			};
 			name = Debug;
 		};
@@ -352,11 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					ppc,
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -369,7 +356,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				INFOPLIST_FILE = "ObjectiveFlickr-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -378,11 +364,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ObjectiveFlickr;
-<<<<<<< HEAD
-				VALID_ARCHS = "ppc i386 x86_64";
-=======
-				SKIP_INSTALL = YES;
->>>>>>> Buildable on Lion with Xcode4.2
+				SKIP_INSTALL = NO;
 			};
 			name = Release;
 		};
@@ -463,10 +445,7 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-<<<<<<< HEAD
-=======
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
->>>>>>> Buildable on Lion with Xcode4.2
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -523,10 +502,7 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-<<<<<<< HEAD
-=======
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
->>>>>>> Buildable on Lion with Xcode4.2
 				SDKROOT = macosx;
 			};
 			name = Test;
@@ -546,11 +522,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					ppc,
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -563,7 +535,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				INFOPLIST_FILE = "ObjectiveFlickr-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -572,11 +543,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ObjectiveFlickr;
-<<<<<<< HEAD
-				VALID_ARCHS = "ppc i386 x86_64";
-=======
-				SKIP_INSTALL = YES;
->>>>>>> Buildable on Lion with Xcode4.2
+				SKIP_INSTALL = NO;
 			};
 			name = Test;
 		};
